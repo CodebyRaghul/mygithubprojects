@@ -16,9 +16,18 @@ import com.bank.service.BankService;
 @RestController
 @RequestMapping(value="/Bank")
 public class BankController {
+	
+	
+	
+//	System.out.print("i am new");
 
 	@Autowired
 	BankService bs;
+	
+	@PostMapping(value="/new endpoint")
+	public String bankPostnew(@RequestBody List<Bank> b){
+		return bs.bankPostAll(b);
+	}
 	
 	@PostMapping(value="/PostAll")
 	public String bankPostAll(@RequestBody List<Bank> b){
