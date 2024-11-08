@@ -13,4 +13,7 @@ public interface BankRepository extends JpaRepository<Bank,Integer>{
 	
 	@Query(value="SELECT branch FROM bank_details.bank_db where ifsc_code= ?",nativeQuery=true)
 	public String getBranch(String ifsc);
+	
+//	@Query(value="SELECT branch FROM bank_details.bank_db where ifsc_code= ?",nativeQuery=true)
+	
 }
